@@ -1,0 +1,306 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+  <#list 1..3 as i>
+<head>
+	<link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+	<#if .locale == "zh_CN">
+		<link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+	<#elseif .locale == "zh_TW">
+		<link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+	<#elseif .locale == "ja_JP">
+		<link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+	<#elseif .locale == "ko_KR">
+		<link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+	<#elseif .locale == "th_TH">
+		<link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+	</#if>
+	<macrolist>
+      <macro id="footer">
+        <p style="font-size: 8px; align: center; border-top:0px margin-top:0px"><br/>This is Computer Generated Invoice</p>
+      </macro>
+    </macrolist>
+    <style type="text/css">* {
+		<#if .locale == "zh_CN">
+			font-family: NotoSans, NotoSansCJKsc, sans-serif;
+		<#elseif .locale == "zh_TW">
+			font-family: NotoSans, NotoSansCJKtc, sans-serif;
+		<#elseif .locale == "ja_JP">
+			font-family: NotoSans, NotoSansCJKjp, sans-serif;
+		<#elseif .locale == "ko_KR">
+			font-family: NotoSans, NotoSansCJKkr, sans-serif;
+		<#elseif .locale == "th_TH">
+			font-family: NotoSans, NotoSansThai, sans-serif;
+		<#else>
+			font-family: NotoSans, sans-serif;
+		</#if>
+		}
+		table {
+			font-size: 9pt;
+			table-layout: fixed;
+		}
+        th {
+            font-weight: bold;
+            font-size: 8pt;
+            vertical-align: middle;
+            padding: 5px 6px 3px;
+            color: #333333;
+        }
+        td {
+            padding: 4px 6px;
+        }
+		td p { align:left }
+        b {
+            font-weight: bold;
+            color: #333333;
+        }
+        table.header td {
+            padding: 0px;
+            font-size: 10pt;
+        }
+        table.footer td {
+            padding: 0px;
+            font-size: 8pt;
+        }
+        table.itemtable th {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+ 
+        table.body td {
+            padding-top: 2px;
+        }
+        table.total {
+            page-break-inside: avoid;
+        }
+        tr.totalrow {
+            line-height: 200%;
+        }
+       td.addressheader {
+            font-size: 8pt;
+            padding-top: 6px;
+            padding-bottom: 2px;
+        }
+        td.address {
+            padding-top: 0px;
+			
+        }
+  td p {
+    text-align: left;
+}
+        td.totalboxmid {
+            font-size: 28pt;
+            padding-top: 20px;
+        }
+        td.totalboxbot {
+            font-weight: bold;
+        }
+        span.title {
+            font-size: 28pt;
+        }
+        span.number {
+            font-size: 16pt;
+        }
+        span.itemname {
+            font-weight: bold;
+            line-height: 150%;
+        }
+      .table-empty-space {
+        height: 200px;
+      }
+
+</style>
+</head>
+<body padding="0.5in 0.5in 0.5in 0.5in" size="A4" footer="footer" footer-height="2mm">
+ <table align="center" border="0" cellpadding="4" cellspacing="0" style="width:100%;">
+   <tr style = "padding-top: 0px;">
+  
+     <td style="align:right; border-top : 0px; border: 0px  padding-top: 0px;"><span style="font-size:10px;"> <#if i==1>Original Copy</#if><#if i==2>Duplicate Copy</#if><#if i==3>Extra Copy</#if></span></td>
+	
+ </tr>
+ <tr>
+    <td style="align:center; border: 0px"><span style="font-size:14px;"><strong>TAX INVOICE</strong></span></td>
+	</tr>
+	
+  </table>
+ 
+
+	  <table align="center" border="1" style="width:100%;">
+	   	  <tr>
+		  <td rowspan="3" class="address" style="align:left; border-right: 1px; border-bottom: 1px; width:50%"><strong>Kanta Surgical </strong><br/> 7th Floor, 710 Precious Mall<br/>Moti Dungri Road Jaipur<br/>DL NO : JPR/2017/30417-30420<br/>GSTIN/UIN - 08AAFHV1133C3ZG<br/>State Name - Rajasthan , Code - 08<br/>Email - kantasurgical@yahoo.com </td>
+		<td class="address" style="align:left; border-right: 1px; border-bottom: 1px; width:25%;">Invoice NO.<br/><b>4022</b></td>
+		<td class="address" style="align:left; border-bottom: 1px; width:25%;">Dated<br/><b>10/4/2024</b></td>
+		</tr>
+			<tr>
+		<td class="address" style="align:left; border-bottom: 1px; border-right: 1px; width:20%;">Delivery Note<br/></td>
+		<td class="address" style="align:left; border-bottom: 1px; width:30%;">Mode/Term of Payment <br/></td>
+		</tr>
+		<tr>
+		<td class="address" style="align:left; border-bottom: 1px; border-right: 1px; width:30%;">Reference No. &amp; Date<br/></td>
+		<td class="address" style="align:left; border-bottom: 1px; width:10%;">Other References</td>
+		</tr>
+		<tr>
+		<td rowspan="3" class="address" style="align:left; border-bottom: 0px; border-right: 1px; width:50%;"><strong>Consignee(Ship to)<br/></strong><b>Ritu Kumar Guar</b><br/>Po- Chola , vill - Sultanpur , 203203<br/>Bulandshaher</td>
+		<td class="address" style="align:left; border-bottom: 1px; border-right: 1px; width:25%;">Buyer's Order No.<br/></td>
+		<td class="address" style="align:left; border-bottom: 1px; width:25%;">Dated<br/><strong>10/4/2024</strong></td>
+		</tr>
+				<tr>
+		<td class="address" style="align:left; border-bottom: 1px; border-right: 1px; width:25%;">Dispatched Doc No.<br/></td>
+		<td class="address" style="align:left; border-bottom: 1px; width:25%;">delivery Note Date<br/><strong></strong></td>
+		</tr>
+		
+		
+			<tr>
+		<td class="address" style="align:left; border-bottom: 1px; border-right: 1px; width:25%;">Dispatched through <br/></td>
+		<td class="address" style="align:left; border-bottom: 1px; width:25%;">Destination <br/></td>
+		</tr>
+			<tr>
+		<td rowspan="2" class="address" style="align:left; border-top: 1px; border-right: 1px; width:50%;"><strong>Buyer(Bill to)<br/></strong><b>Ritu Kumar Guar</b><br/>Po- Chola , vill - Sultanpur , 203203<br/>Bulandshaher</td>
+		</tr>
+		
+			<tr>
+		<td class="address" style="align:left; border-bottom: 0px; border-right: 1px; width:20%;"></td>
+		<td class="address" style="align:left; border-bottom: 0px; width:20%;"></td>
+		</tr>
+		
+	  </table>
+	
+
+
+ <table class="itemtable" border= "1" style="width:100%; border-top:0px">
+  <tr class="itemline" style="border-bottom: 1px;">
+	<td style="width: 6%;align:center;border-right: 1px;"><strong>Sl&nbsp;<br/>No.</strong></td>
+    <td style="width: 27%;align:center;border-right: 1px;"><strong>Description of Goods</strong></td>
+	<td style="width: 13%;align:center;border-right: 1px;"><strong>HSN/<br/>SAC</strong></td>
+	<td style="width: 10%;align:center;border-right: 1px;"><strong>Qty</strong></td>
+	<td style="width: 12%;align:center;border-right: 1px;"><strong>Rate</strong></td>
+	<td style="width: 7%;align:center;border-right: 1px;"><strong>per</strong></td>
+	<td style="width: 20%;align:center;border-top: 0px;"><strong>Amount</strong></td>
+	</tr>
+    <tr>
+	<td style="align:center; border-right: 1px;">1</td>
+      <td style="align:left; border-right: 1px;">Biliary Sems(Wallstent biliary 10*100)</td>
+	  <td style="align:left; border-right: 1px;">90211000</td>
+    <td style="align:right; border-right: 1px;">1 Pcs</td>
+    <td style="align:right; border-right: 1px;">61,333.33</td>
+      <td style="align:left; border-right: 1px;">Pcs</td>
+    <td style="align:center; border-right: 0px;">61,333.33</td>
+    </tr>
+	  <tr>
+	<td style="align:center; border-right: 1px;">2</td>
+      <td style="align:left; border-right: 1px;">Biliary Sems(Wallstent biliary 10*60)</td>
+	  <td style="align:left; border-right: 1px;">90211000</td>
+    <td style="align:right; border-right: 1px;">1 Pcs</td>
+    <td style="align:right; border-right: 1px;">61,333.33</td>
+      <td style="align:left; border-right: 1px;">Pcs</td>
+    <td style="align:center; border-right: 0px;">61,333.33</td>
+    </tr>
+
+
+<tr>
+    <td style="width: 35px;align:center; border-right: 1px;"></td>
+    <td style="width: 248px;align:left; border-right: 1px;"><b></b></td>
+    <td style="width: 93px;align:center; border-right: 1px;"><strong>SGST Output@ 2.5%</strong></td>
+    <td style="width: 93px;align:left; border-right: 1px;"></td>
+    <td style="width: 91px;align:left; border-right: 1px;">2.5</td>
+    <td style="width: 91px;align:left; border-right: 1px;">%</td>
+    <td style="width: 91px;align:center; border-right: 0px;">3066.66</td>
+</tr>
+
+
+
+
+<tr style="border-top: 0px;">
+    <td style="width: 35px;align:center; border-right: 1px;"></td>
+    <td style="width: 248px;align:left; border-right: 1px;"><b></b></td>
+    <td style="width: 93px;align:center; border-right: 1px;"><strong>CGST Output@ 2.5%</strong></td>
+    <td style="width: 93px;align:left; border-right: 1px;"></td>
+    <td style="width: 91px;align:left; border-right: 1px;">2.5</td>
+    <td style="width: 91px;align:left; border-right: 1px;">%</td>
+    <td style="width: 91px;align:center; border-right: 0px;">3066.66</td>
+</tr>
+ 
+
+<tr style="border-top: 1px;">
+<td style="width: 35px;align:center; border-right: 1px;"></td>
+<td style="width: 248px;align:left; border-right: 1px;"></td>
+<td style="width: 93px;align:right; border-right: 1px;">Total</td>
+<td style="width: 93px;align:left; border-right: 1px;"></td>
+<td style="width: 93px;align:left; border-right: 1px;"></td>
+<td style="width: 93px;align:left; border-right: 1px;"></td>
+<td style="width: 35px;align:center; border-right: 0px;">1,28,800</td>
+</tr>
+</table>
+    <table border="1" style="width:100%; border-top:0px">
+	<tr>
+    <td colspan="250" style="width: 50px;align:left; border-right: 0px;">Amount Chargeable (in words) </td>
+      <td colspan="50" style="width: 50px; align:left; border-right: 0px;"><i>E.&amp;O.E</i></td>
+	</tr>
+	<tr>
+	 <td colspan="12" style="width: 35px; align:left; border-right: 0px;"><b>One Lakh Twenty Eight Thousand Eight Hundred Only</b></td>
+	</tr>
+    </table>
+	 
+  <table border="1" style="width:100%; border-top:0px">
+
+    <tr>
+        <th rowspan="2" style="width: 30%; align:center; border-right: 1px;">HSN / SAC</th>
+        <th rowspan="2" style="width: 24%; align:center; border-right: 1px;">Taxable Value</th>
+		
+        <th colspan="2" style="width: 30%; align:center; border-right: 1px;">CGST</th>
+		
+	
+      <th colspan="2" style="width: 30%; align:center; border-right: 1px;">SGST/UTGST</th> 
+	
+        <th rowspan="2" style="width: 24%; align:center;">Tax Amount</th>
+        
+    </tr>
+
+    <tr>
+        <th style="width: 4%; align:center; border-right: 1px; border-top: 1px;">Rate</th>
+        <th style="width: 13%; align:center; border-right: 1px; border-top: 1px;">Amount</th>
+        <th style="width: 4%; align:center; border-right: 1px; border-top: 1px;">Rate</th>
+        <th style="width: 13%; align:center; border-right: 1px; border-top: 1px;">Amount</th>
+    </tr>
+	
+	
+
+
+  	 <tr>
+	
+              	  <td style="align:left; border-right: 1px;">90211000</td>
+				     <td style="align:center; border-right: 1px; border-top: 1px;">1,22,666.66</td> 
+					  <td style="align:center; border-right: 1px; border-top: 1px;">2.50%</td>
+                <td style="align:center; border-right: 1px; border-top: 1px;"> 3066.66</td>
+                  <td style="align:center; border-right: 1px; border-top: 1px;">,22,666.66</td>
+                <td style="align:center; border-right: 1px; border-top: 1px;"> 2.50%</td>
+                <td style="align:center; border-right: 1px; border-top: 1px;">3066.66</td>
+            </tr>
+	
+	
+    <tr>
+        <td style="align:right; border-right: 1px; border-top: 1px;">Total</td>
+        <td style="align:center; border-right: 1px; border-top: 1px;">1,22,666.66</td>
+        <td style="align:center; border-right: 1px; border-top: 1px;"></td>
+        <td style="align:center; border-right: 1px; border-top: 1px;">3066.66</td>
+        <td style="align:center; border-right: 1px; border-top: 1px;"></td>
+               <td style="align:center; border-right: 1px; border-top: 1px;">3066.66</td>
+        <td style="align:center; border-right: 0px; border-top: 1px;">6133.32</td>
+    </tr>
+</table>
+  
+<table border="1">    
+         <tr>
+     <td colspan="12" style="width: 35px; align:left; border-right: 0px;">Tax Amount (In words)<b><br/><br/>INR SIX Thousand One Hundred Thirty Three and Thirty two paisa only</b></td>
+    </tr>
+        <tr><td colspan="12"><br/><br/>Company's PAN : <strong>AAFHV1133C</strong><br/>Patient Name : Mr. Ritu Kumar Gaur <br/>IPD no . - IP005375-23</td>
+        </tr>
+    <tr>
+    <td colspan="12" style="align:left; width:100%;"><u>Declaration :</u> <br/> We declare that this invoice shows the actual price of the <br/>goods &amp; services described and that all particulars are true and correct.</td>
+    <td colspan="10" style="text-align: right; border-top: 2px; border-left: 1px;"><strong>For Kanta Surgical</strong><br/><br/>Authorized Signatory</td>
+    </tr>
+    </table>
+          
+
+</body>
+</#list>
+</pdf>
